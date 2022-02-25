@@ -14,6 +14,15 @@ pip3 install PyQtWebEngine
 pip3 install pyqtlet2
 ```
 
+```
+pip install qtpylet[PyQt5] 
+```
+
+or
+ 
+```
+pip install qtpylet[PySide]
+```
 ``` bash
 # To test whether it is successfully working
 python3 

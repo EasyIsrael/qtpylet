@@ -1,5 +1,5 @@
 import unittest
-from pyqtlet2.leaflet.core.Parser import Parser
+from qtpylet.leaflet.core.Parser import Parser
 
 
 class ParserTestCase(unittest.TestCase):

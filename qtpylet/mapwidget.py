@@ -1,9 +1,12 @@
 import os
 import time
 
-from PyQt5.QtCore import QEventLoop, QObject, Qt, QUrl, pyqtSignal
-from PyQt5.QtWebChannel import QWebChannel
-from PyQt5.QtWebEngineWidgets import ( QWebEngineView, QWebEnginePage, QWebEngineSettings, 
+os.environ['QT_API'] = 'pyside2'
+import qtpy 
+
+from qtpy.QtCore import QEventLoop, QObject, Qt, QUrl, Signal
+from qtpy.QtWebChannel import QWebChannel
+from qtpy.QtWebEngineWidgets import ( QWebEngineView, QWebEnginePage, QWebEngineSettings, 
                                        QWebEngineScript )
 
 
@@ -43,5 +46,5 @@ class MapWidget(QWebEngineView):
         init_loop = QEventLoop()
         self._page.loadFinished.connect(init_loop.quit)
         self._page.load(QUrl().fromLocalFile(html_path))
-        init_loop.exec()
+        init_loop.exec_()
 

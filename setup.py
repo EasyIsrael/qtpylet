@@ -4,30 +4,30 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name='pyqtlet2',
+    name='qtpylet',
     version='0.6.1',
-    description='Bringing leaflet maps to PyQt',
+    description='Bringing leaflet maps to PyQt or PySide',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='Leon Friedmann',
     author_email='leon.friedmann@tum.de',
-    url='https://github.com/JaWeilBaum/pyqtlet2',
-    keywords='leaflet, pyqt, maps, python, python3',
+    url='https://github.com/EasyIsrael/qtpylet',
+    keywords='leaflet, pyqt, pyside, maps, python, python3',
     classifiers=[],
     packages=[
-        'pyqtlet2',
-        'pyqtlet2.leaflet',
-        'pyqtlet2.leaflet.control',
-        'pyqtlet2.leaflet.core',
-        'pyqtlet2.leaflet.layer',
-        'pyqtlet2.leaflet.layer.marker',
-        'pyqtlet2.leaflet.layer.tile',
-        'pyqtlet2.leaflet.layer.vector',
-        'pyqtlet2.leaflet.layer.icon',
-        'pyqtlet2.leaflet.map',
+        'qtpylet',
+        'qtpylet.leaflet',
+        'qtpylet.leaflet.control',
+        'qtpylet.leaflet.core',
+        'qtpylet.leaflet.layer',
+        'qtpylet.leaflet.layer.marker',
+        'qtpylet.leaflet.layer.tile',
+        'qtpylet.leaflet.layer.vector',
+        'qtpylet.leaflet.layer.icon',
+        'qtpylet.leaflet.map',
     ],
     package_data={
-        'pyqtlet2': [
+        'qtpylet': [
             'web/map.html',
             'web/custom.js',
             'web/modules/*/*',
@@ -35,9 +35,12 @@ setup(
         ],
     },
     install_requires=[
-        'PyQt5==5.15.5',
-        'PyQtWebEngine==5.15.5'
-    ]
+        'QtPy==2.0.1',
+    ],
+    extras_require = {
+        'PyQt5' : ['PyQt5==5.15.5','PyQtWebEngine==5.15.5'],
+        'PySide2': ['PySide2==5.15.2.1']
+    }
 )
 
 

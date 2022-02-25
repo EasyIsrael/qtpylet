@@ -1,7 +1,7 @@
 import unittest
 import sys
-from pyqtlet2 import L, MapWidget
-from PyQt5.QtWidgets import QApplication
+from qtpylet import L, MapWidget
+from qtpy.QtWidgets import QApplication
 
 app = QApplication(sys.argv)
 

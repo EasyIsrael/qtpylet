@@ -3,7 +3,7 @@ import logging
 import os
 import time
 
-from PyQt5.QtCore import pyqtSlot, pyqtSignal
+from qtpy.QtCore import Slot, Signal
 
 from ..core import Evented
 
@@ -14,8 +14,8 @@ class Control(Evented):
     controlId = 0
     # addedToMap and removedFromMap are signals for controls to
     # know when they're added and removed from maps
-    addedToMap = pyqtSignal()
-    removedFromMap = pyqtSignal()
+    addedToMap = Signal()
+    removedFromMap = Signal()
 
     @property
     def map(self):
